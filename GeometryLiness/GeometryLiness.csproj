@@ -43,9 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Length.cs" />
-    <Compile Include="Line.cs" />
-    <Compile Include="GeometryCoordinateLines.cs" />
+    <Compile Include="GeometryLines.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

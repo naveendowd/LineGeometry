@@ -12,6 +12,7 @@ namespace GeometryLines
         {
             Console.WriteLine("Welcome to Geometry Co-ordinates");
             Geometryco_ordinates.Coordinates();
+            Console.ReadLine();
         }
     }
 }
