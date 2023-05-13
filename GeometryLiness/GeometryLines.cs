@@ -6,25 +6,57 @@ using System.Threading.Tasks;
 
 namespace GeometryLines
 {
-    public class Geometryco_ordinates
+    class Geometryco_ordinates
     {
-        public static void Coordinates()
-        {
-            // input the coordinates
-            Console.Write("Enter the x-coordinate of the first point: ");
-            double x1 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter the y-coordinate of the first point: ");
-            double y1 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter the x-coordinate of the second point: ");
-            double x2 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter the y-coordinate of the second point: ");
-            double y2 = Convert.ToDouble(Console.ReadLine());
+           public static void Comparable()
+            {
+                Console.WriteLine("Enter the coordinates of the first endpoint (x1, y1):");
+                double x1 = Convert.ToDouble(Console.ReadLine());
+                double y1 = Convert.ToDouble(Console.ReadLine());
 
-            // calculate the length of the line
-            double length = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+                Console.WriteLine("Enter the coordinates of the second endpoint (x2, y2):");
+                double x2 = Convert.ToDouble(Console.ReadLine());
+                double y2 = Convert.ToDouble(Console.ReadLine());
 
-            // output the length of the line
-            Console.WriteLine("The length of the line is: " + length);
+                double length1 = CalculateLength(x1, y1, x2, y2);
+
+                Console.WriteLine("Enter the coordinates of the third endpoint (x3, y3):");
+                double x3 = Convert.ToDouble(Console.ReadLine());
+                double y3 = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Enter the coordinates of the fourth endpoint (x4, y4):");
+                double x4 = Convert.ToDouble(Console.ReadLine());
+                double y4 = Convert.ToDouble(Console.ReadLine());
+
+                double length2 = CalculateLength(x3, y3, x4, y4);
+
+                Console.WriteLine("Length of the first line segment: " + length1);
+                Console.WriteLine("Length of the second line segment: " + length2);
+
+                if (length1 == length2)
+                {
+                    Console.WriteLine("Both line segments are of equal length.");
+                }
+                else if (length1 > length2)
+                {
+                    Console.WriteLine("The first line segment is longer than the second line segment.");
+                }
+                else
+                {
+                    Console.WriteLine("The second line segment is longer than the first line segment.");
+                }
+            }
+
+            static double CalculateLength(double x1, double y1, double x2, double y2)
+            {
+                double deltaX = x2 - x1;
+                double deltaY = y2 - y1;
+
+                return Math.Sqrt(deltaX * deltaX + deltaY * deltaY);
+            }
         }
     }
-}
+
+
+
+

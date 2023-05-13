@@ -11,7 +11,7 @@ namespace GeometryLines
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Geometry Co-ordinates");
-            Geometryco_ordinates.Coordinates();
+            Geometryco_ordinates.Comparable();
             Console.ReadLine();
         }
     }
