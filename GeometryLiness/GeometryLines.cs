@@ -37,13 +37,10 @@ namespace GeometryLines
                 {
                     Console.WriteLine("Both line segments are of equal length.");
                 }
-                else if (length1 > length2)
-                {
-                    Console.WriteLine("The first line segment is longer than the second line segment.");
-                }
+                
                 else
                 {
-                    Console.WriteLine("The second line segment is longer than the first line segment.");
+                    Console.WriteLine("Both line segments are not equal length.");
                 }
             }
 
